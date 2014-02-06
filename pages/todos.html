@@ -1,0 +1,10 @@
+<h3>Todos</h3>
+<form id="todo-form" data-ng-submit="newTodo()">
+  <input id="new-todo" placeholder="New task..." data-ng-model="workingTodo">
+  <input type="submit" value="Add">
+</form>
+<ul>
+  <li data-ng-repeat="todo in todos">
+    {{ todo.name }}
+  </li>
+</ul>

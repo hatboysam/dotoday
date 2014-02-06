@@ -1,5 +1,12 @@
 var doTodayApp = angular.module('doTodayApp', ['ngRoute']);
 
-doTodayApp.controller('MainCtrl', function($scope) {
-  $scope.message = "Hello, DoToday";
+/**
+ * Routing
+ */
+doTodayApp.config(function($routeProvider) {
+  // Route for the main page
+  $routeProvider.when('/', {
+      templateUrl: 'pages/todos.html',
+      controller: 'TodoCtrl'
+  });
 });

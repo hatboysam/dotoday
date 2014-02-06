@@ -7,11 +7,18 @@
     <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.10/angular-route.js"></script>
 
     <!-- Custom -->
-    <script src="/js/script.js"></script>
+    <script src="js/script.js"></script>
   </head>
 
   <body data-ng-controller="MainCtrl">
-    {{ message }}
+    <h1>{{ title }}</h1>
+
+    <!-- Angular Templating -->
+    <div data-ng-view></div>
+
+    <!-- Scripts -->
+    <script src="js/controllers/mainCtrl.js"></script>
+    <script src="js/controllers/todoCtrl.js"></script>
   </body>
 
 </html>
