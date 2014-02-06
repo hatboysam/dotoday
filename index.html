@@ -2,6 +2,10 @@
   <head>
     <title>DoToday</title>
 
+    <!-- Foundation -->
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/foundation.min.css" />
+
     <!-- Angular -->
     <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.10/angular.min.js"></script>
     <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.10/angular-route.js"></script>
@@ -11,10 +15,24 @@
   </head>
 
   <body data-ng-controller="MainCtrl">
-    <h1>{{ title }}</h1>
+    <!-- Top Navigation Bar -->
+    <nav class="top-bar" data-topbar>
+      <ul class="title-area">
+        <li class="name">
+          <h1><a href="/">{{ title }}</a></h1>
+        </li>
+      </ul>
+    </nav>
 
-    <!-- Angular Templating -->
-    <div data-ng-view></div>
+    <!-- Main Content Section -->
+    <section role="main">
+      <div class="row">
+        <div class="large-12 columns">
+            <!-- Angular Templating -->
+            <div data-ng-view></div>
+        </div>
+      </div>
+    </section>
 
     <!-- Scripts -->
     <script src="js/controllers/mainCtrl.js"></script>

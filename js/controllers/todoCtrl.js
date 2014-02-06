@@ -9,10 +9,28 @@ doTodayApp.controller('TodoCtrl', function($scope) {
   $scope.workingTodo = '';
 
   /**
-   * Add a new todo
+   * Add a new todo from the form
    */
   $scope.newTodo = function() {
-    $scope.todos.push({ name: $scope.workingTodo });
+    $scope.todos.push(createTodo($scope.workingTodo));
     $scope.workingTodo = '';
   };
+
+  /**
+   * Mark a todo as completed
+   */
+  $scope.completeTodo = function(todo) {
+    todo.completed = true;
+  };
+
 });
+
+/**
+ * Todo constructor
+ */
+function createTodo(name) {
+  return {
+    name: name,
+    completed: false
+  };
+}
